@@ -1,0 +1,18 @@
+{
+  "name": "euler-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "multiples.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
