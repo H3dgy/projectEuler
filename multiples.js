@@ -76,8 +76,31 @@ function largestPalin (a) {
   }
   return max;
 }
-console.log(largestPalin(999));
-console.log(isPalin(909));
-console.log(isPalin(1001));
-console.log(isPalin(9090));
+
+function evenlyDivisible (max) {
+  let upperLmt = upperLimit (max);
+
+  for (let j = max; j < upperLmt; j++) {
+    for (let k = 1; k <= max; k++) {
+      if (j % k !== 0) {
+        break;
+      } else {
+        if (k === max) {
+          return j;
+        }
+      }
+    }
+  }
+
+  function upperLimit (max) {
+    let res = 1;
+    for (let i = 1; i <= max; i++) {
+      res = res * i;
+    }
+    return res;
+  }
+}
+
+
+
 module.exports = multiples;
