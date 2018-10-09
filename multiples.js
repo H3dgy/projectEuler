@@ -103,7 +103,8 @@ function evenlyDivisible (max) {
 
 function sumSquareDifference (max) {
   let squareOfSum = max*(max+1)/2 * max*(max+1)/2;
-  let sumOfSquare = sumOfSquares (max);
+  let sumOfSquare = (2*max + 1)*(max + 1)*max / 6;
+
 
   function sumOfSquares (max) {
     let sum = 0;
@@ -114,6 +115,8 @@ function sumSquareDifference (max) {
   }
   return squareOfSum - sumOfSquare;
 }
+
+
 
 console.log(sumSquareDifference(100));
 
