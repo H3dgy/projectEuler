@@ -101,6 +101,22 @@ function evenlyDivisible (max) {
   }
 }
 
+function sumSquareDifference (max) {
+  let squareOfSum = max*(max+1)/2 * max*(max+1)/2;
+  let sumOfSquare = sumOfSquares (max);
+
+  function sumOfSquares (max) {
+    let sum = 0;
+    for (let i = 0; i <= max; i++) {
+      sum = i * i + sum;
+    }
+    return sum;
+  }
+  return squareOfSum - sumOfSquare;
+}
+
+console.log(sumSquareDifference(100));
+
 
 
 module.exports = multiples;
